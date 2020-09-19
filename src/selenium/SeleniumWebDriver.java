@@ -9,7 +9,16 @@ public class SeleniumWebDriver implements WebBrowser{
 
 	private static WebDriver driver;
 	
-	public static WebDriver chromeDriver()
+	/*
+	 * public static WebDriver chromeDriver() {
+	 * 
+	 * return driver; }
+	 * 
+	 * public static WebDriver fireFoxDriver() { return driver; }
+	 */
+
+	@Override
+	public WebDriver initateChromeDriver()
 	{
 		System.setProperty("webdriver.chrome.driver","/Users/cajetanfernandes/Project Resources/Java Project Resouces/chromedriver");
 		ChromeOptions cmo = new ChromeOptions();
@@ -17,23 +26,12 @@ public class SeleniumWebDriver implements WebBrowser{
 		driver = new ChromeDriver(cmo);
 		return driver;
 	}
-	
-	public static WebDriver fireFoxDriver()
+
+	@Override
+	public WebDriver initiateFirefoxDriver()
 	{
 		System.setProperty("webdriver.gecko.driver","/Users/cajetanfernandes/Project Resources/Java Project Resouces/geckodriver");
 		driver = new FirefoxDriver();
 		return driver;
-	}
-
-	@Override
-	public void initateChromeDriver() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void initiateFirefox() {
-		// TODO Auto-generated method stub
-		
 	}
 }

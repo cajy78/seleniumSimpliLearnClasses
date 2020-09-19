@@ -7,7 +7,10 @@ public class launchSeleniumBrowserTest {
 
 	public static void main(String[] args)
 	{
-		WebDriver driver = SeleniumWebDriver.fireFoxDriver();
+		SeleniumWebDriver d = new SeleniumWebDriver();
+		WebDriver driver = d.initiateFirefoxDriver();
+		driver.get("https://www.amazon.in");
+		driver = d.initateChromeDriver();
 		driver.get("https://www.amazon.in");
 	}
 }

@@ -1,7 +1,8 @@
 package selenium;
+import org.openqa.selenium.WebDriver;
 
 public interface WebBrowser
 {
-	abstract void initateChromeDriver();
-	abstract void initiateFirefox();
+	abstract WebDriver initateChromeDriver();
+	abstract WebDriver initiateFirefoxDriver();
 }
