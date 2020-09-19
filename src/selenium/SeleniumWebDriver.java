@@ -8,14 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class SeleniumWebDriver implements WebBrowser{
 
 	private static WebDriver driver;
-	
-	/*
-	 * public static WebDriver chromeDriver() {
-	 * 
-	 * return driver; }
-	 * 
-	 * public static WebDriver fireFoxDriver() { return driver; }
-	 */
 
 	@Override
 	public WebDriver initateChromeDriver()
