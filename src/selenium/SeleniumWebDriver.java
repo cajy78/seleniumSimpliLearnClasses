@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SeleniumWebDriver {
+public class SeleniumWebDriver implements WebBrowser{
 
 	private static WebDriver driver;
 	
@@ -23,5 +23,17 @@ public class SeleniumWebDriver {
 		System.setProperty("webdriver.gecko.driver","/Users/cajetanfernandes/Project Resources/Java Project Resouces/geckodriver");
 		driver = new FirefoxDriver();
 		return driver;
+	}
+
+	@Override
+	public void initateChromeDriver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void initiateFirefox() {
+		// TODO Auto-generated method stub
+		
 	}
 }
